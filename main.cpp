@@ -1,5 +1,5 @@
 #include <iostream>
-#include "include/complex.hpp"
+#include "include/LinearMathLibrary/LinearMathLibrary.hpp"
 
 int main() {
     Complex<int> complex(3,4);
