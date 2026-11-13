@@ -7,6 +7,8 @@ int main() {
     complex1 += complex2;
     complex1.print();
     std::cout << (complex1 == complex2) << std::endl;
+    complex1 *= complex2;
+    complex1.print();
     std::cout << "init\n";
     return 0;
 }

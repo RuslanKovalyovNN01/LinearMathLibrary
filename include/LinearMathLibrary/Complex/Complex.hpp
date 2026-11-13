@@ -18,6 +18,13 @@ public:
         imag -= other.imag;
         return *this;
     }
+    Complex& operator*=(const Complex &other){
+        T realCopy = real;
+        T imagCopy = imag;
+        real = realCopy * other.real - imagCopy * other.imag;
+        imag = realCopy * other.imag + imag * other.real;
+        return *this;
+    }
     bool operator==(const Complex &other) const{
         return (real == other.real && imag == other.imag);
     }
@@ -41,3 +48,8 @@ inline Complex<T> operator-(Complex<T> lhs, const Complex<T> &rhs){
     return lhs;
 }
 
+template<typename T>
+inline Complex<T> operator*(Complex<T> lhs, const Complex<T> *rhs){
+    lhs *= rhs;
+    return lhs;
+}
